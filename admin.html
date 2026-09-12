@@ -1,0 +1,231 @@
+<!-- Admin Hyper Text Markup Language file -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<!-- Linkar Arquivos -->
+		<link rel="stylesheet" href="assets/css/admin.css">
+		<link rel="stylesheet" href="assets/css/variaveis.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<!-- Devicons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+		<!-- Fontes -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Biblioteca animate on scroll -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+		<!-- View Port -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Desc da pagina -->
+		<meta name="description" content="">
+		<title>Painel administrativo</title>
+	</head>
+	<body>
+		<main class="login-container" id="login-screen">
+			<h1>Login admin</h1>
+			<form id="login-form">
+				<input type="email" id="email" placeholder="seu@email.com" required>
+				<input type="password" id="password" placeholder="Sua senha" required>
+				
+				<button type="submit">Entrar</button>
+			</form>
+			
+			<p class="login-message" id="login-message"></p>
+		</main>
+    
+<main class="admin-panel" id="admin-panel">
+  <nav class="admin-header">
+    <h1>Painel do Professor</h1>
+
+    <button id="add-bird-btn">
+        + Adicionar pássaro
+    </button>
+  </nav>
+    <section id="birds-list">
+        <!-- Os pássaros vão aparecer aqui -->
+    </section>
+    <!-- Modal adicionar pássaro -->
+<div class="modal-overlay" id="add-bird-modal">
+
+    <div class="bird-modal">
+
+        <div class="modal-header">
+            <h2>Adicionar pássaro</h2>
+
+            <button class="close-modal" id="close-add-modal">
+                &times;
+            </button>
+        </div>
+
+        <form id="add-bird-form">
+
+            <div class="form-group">
+                <label for="bird-name">Nome</label>
+                <input
+                    type="text"
+                    id="bird-name"
+                    placeholder="Ex.: Balança-Rabo-Leitoso"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="scientific-name">Nome científico</label>
+                <input
+                    type="text"
+                    id="scientific-name"
+                    placeholder="Ex: Pitangus sulphuratus"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bird-image">Imagem</label>
+
+                <label class="file-input" id="image-file-label">
+    <i class="fa-solid fa-image"></i>
+    <span>Selecionar imagem</span>
+
+    <input
+        type="file"
+        id="bird-image"
+        accept="image/*"
+        required
+    >
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="bird-audio">Áudio</label>
+
+                <label class="file-input" id="audio-file-label">
+    <i class="fa-solid fa-volume-high"></i>
+    <span>Selecionar áudio</span>
+
+    <input
+        type="file"
+        id="bird-audio"
+        accept="audio/*"
+        required
+    >
+                </label>
+            </div>
+
+            <button type="submit" class="save-bird-btn">
+                Adicionar pássaro
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+  <!-- Modal de editar pássaro -->
+<div class="modal-overlay" id="edit-bird-modal">
+
+    <div class="bird-modal">
+
+        <div class="modal-header">
+            <h2>Editar pássaro</h2>
+
+            <button class="close-modal" id="close-edit-modal">
+                &times;
+            </button>
+        </div>
+
+        <form id="edit-bird-form">
+
+            <div class="form-group">
+                <label for="edit-bird-name">Nome</label>
+
+                <input
+                    type="text"
+                    id="edit-bird-name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="edit-scientific-name">
+                    Nome científico
+                </label>
+
+                <input
+                    type="text"
+                    id="edit-scientific-name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+
+                <label for="edit-bird-image">
+                    Nova imagem
+                </label>
+
+                <label class="file-input">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <span id="edit-image-file-name">
+                        Manter imagem atual
+                    </span>
+
+                    <input
+                        type="file"
+                        id="edit-bird-image"
+                        accept="image/*"
+                    >
+
+                </label>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="edit-bird-audio">
+                    Novo áudio
+                </label>
+
+                <label class="file-input">
+
+                    <i class="fa-solid fa-volume-high"></i>
+
+                    <span id="edit-audio-file-name">
+                        Manter áudio atual
+                    </span>
+
+                    <input
+                        type="file"
+                        id="edit-bird-audio"
+                        accept="audio/*"
+                    >
+
+                </label>
+
+            </div>
+
+            <button
+                type="submit"
+                class="save-bird-btn"
+            >
+                Salvar alterações
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+</main>
+	<!-- Bibliotecas -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/ab2b0f0226.js" crossorigin="anonymous"></script>
+
+<!-- Scripts do projeto -->
+<script src="assets/js/MySQL.js"></script>
+<script src="assets/js/admin.js"></script>
+	</body>
+</html>

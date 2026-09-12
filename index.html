@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<!-- Linkar Arquivos -->
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/variaveis.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<!-- Devicons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+		<!-- Fontes -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Biblioteca animate on scroll -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+		<!-- View Port -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Desc da pagina -->
+		<meta name="description" content="">
+		<title>Catálogo Pássaros</title>
+	</head>
+	<body>
+
+    <header class="site-header">
+
+        <div class="header-content">
+
+            <span class="header-icon">
+                <i class="fa-solid fa-dove"></i>
+            </span>
+
+            <h1>Aves do Brasil</h1>
+
+            <p>
+                Conheça algumas das aves encontradas
+                em nosso país e descubra seus cantos.
+            </p>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Pesquisa -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="search-bird"
+                    placeholder="Pesquisar pássaro..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- Catálogo -->
+
+        <section class="birds-section">
+
+            <div class="section-title">
+
+                <h2>Pássaros</h2>
+
+                <p>
+                    Explore as aves cadastradas no catálogo.
+                </p>
+
+            </div>
+
+            <div id="birds-container">
+
+            </div>
+
+            <div id="empty-message">
+
+                <i class="fa-solid fa-dove"></i>
+
+                <h3>Nenhum pássaro cadastrado</h3>
+
+                <p>
+                    Os pássaros adicionados pelo professor
+                    aparecerão aqui.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+		<!-- Linkar scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="assets/js/MySQL.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://kit.fontawesome.com/ab2b0f0226.js" crossorigin="anonymous"></script>
+	</>
+</html>
