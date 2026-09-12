@@ -1,0 +1,363 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #f7fbfd;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+.site-header {
+    width: 100%;
+    padding: 55px 20px 45px;
+    background:
+        linear-gradient(
+            145deg,
+            #e9f8ff,
+            #ffffff 65%
+        );
+    border-bottom: 1px solid #dff2fa;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+    color: #4db9e9;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(102, 199, 242, 0.18);
+}
+
+.header-content h1 {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+
+    color: #1e293b;
+}
+
+.header-content p {
+    max-width: 450px;
+    margin: 0 auto;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #64748b;
+}
+
+
+/* ============================= */
+/* CONTEÚDO */
+/* ============================= */
+
+main {
+    width: 100%;
+}
+
+
+/* ============================= */
+/* PESQUISA */
+/* ============================= */
+
+.search-section {
+    width: 100%;
+    padding: 25px 18px 10px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 600px;
+    height: 52px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+    gap: 11px;
+
+    background: #ffffff;
+
+    border: 1px solid #dcecf3;
+    border-radius: 13px;
+
+    box-shadow:
+        0 5px 20px rgba(30, 41, 59, 0.04);
+
+    transition: 0.2s ease;
+}
+
+.search-box i {
+    color: #66c7f2;
+    font-size: 15px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.search-box:focus-within {
+    border-color: #66c7f2;
+
+    box-shadow:
+        0 0 0 3px rgba(102, 199, 242, 0.10);
+}
+
+
+/* ============================= */
+/* SEÇÃO DOS PÁSSAROS */
+/* ============================= */
+
+.birds-section {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 35px 18px 50px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin-bottom: 5px;
+
+    font-size: 23px;
+    color: #1e293b;
+}
+
+.section-title p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* ============================= */
+/* CONTAINER DOS CARDS */
+/* ============================= */
+
+#birds-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* ============================= */
+/* CARD DO PÁSSARO */
+/* ============================= */
+
+.bird-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2edf2;
+    border-radius: 16px;
+
+    box-shadow:
+        0 7px 25px rgba(30, 41, 59, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.bird-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(30, 41, 59, 0.09);
+}
+
+
+/* ============================= */
+/* IMAGEM DO CARD */
+/* ============================= */
+
+.bird-card img {
+    width: 100%;
+    height: 220px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ============================= */
+/* INFORMAÇÕES */
+/* ============================= */
+
+.bird-card-info {
+    padding: 18px;
+}
+
+.bird-card-info h2 {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    color: #1e293b;
+}
+
+.bird-card-info .scientific-name {
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #64748b;
+}
+
+
+/* ============================= */
+/* ÁUDIO */
+/* ============================= */
+
+.bird-card audio {
+    width: 100%;
+    height: 38px;
+}
+
+
+/* ============================= */
+/* MENSAGEM VAZIA */
+/* ============================= */
+
+#empty-message {
+    display: none;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2edf2;
+    border-radius: 16px;
+}
+
+#empty-message i {
+    margin-bottom: 12px;
+
+    font-size: 28px;
+    color: #66c7f2;
+}
+
+#empty-message h3 {
+    margin-bottom: 7px;
+
+    font-size: 17px;
+    color: #1e293b;
+}
+
+#empty-message p {
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #64748b;
+}
+
+
+/* ============================= */
+/* DESKTOP */
+/* ============================= */
+
+@media (min-width: 700px) {
+
+    .site-header {
+        padding: 75px 25px 60px;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+
+    .search-section {
+        padding-top: 35px;
+    }
+
+    .birds-section {
+        max-width: 1000px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #birds-container {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .bird-card img {
+        height: 230px;
+    }
+
+}
+.bird-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
